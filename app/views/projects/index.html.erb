@@ -1,0 +1,27 @@
+<div class="row-fluid">
+  <div class="span4">
+<h1 class="text-error">Projects</h1>
+
+<table class="table table-condensed table-striped table-hover table-bordered span9">
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= project.desc %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<div>
+
+<br />
+<br />
+
+<div class="row-fluid">
+<div class="span 8">
+<%= link_to 'New Project', new_project_path %>
+</div></div>

@@ -1,0 +1,28 @@
+<br />
+<br />
+<br />
+<div class="row-fluid">
+  <div class="span1"></div>
+  <div class="span5">
+   <table class="table table-bordered table-condensed table-hover table-striped span11">
+   <tr>
+     <th>id</th>
+     <th>Name</th>
+     <th>Email</th>
+     <th>New</th>
+     <th>Show</th>
+   </tr>
+   <% @employees.each do |employee| %> 
+      <tr>
+         <td><%= employee.id %></td>
+         <td><%= link_to employee.name, employee %></td>
+         <td><%= link_to employee.email, employee %></td>
+         <td><btn class="btn btn-primary btn-info"><a href="/new_timesheet/<%=employee.id%>"><i class="icon-calendar icon-white"> </i></a></btn></td>
+         <td><btn class="btn btn-primary btn-success"><a href="/show_timesheets/<%=employee.id%>"><i class="icon-list icon-white"> </i></a></btn></td>
+      </tr> 
+   <% end %> 
+   </table>
+   </div>
+  <div class="span3"></div>
+</div>
+
